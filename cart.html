@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)./cart/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<base href="../">--><base href=".">
+    
+    <link href="./cart_files/style.css" rel="stylesheet">
+    <link href="./cart_files/cart.css" rel="stylesheet">
+    <link href="./cart_files/form.css" rel="stylesheet">
+    <title>Корзина</title>
+</head>
+<body cz-shortcut-listen="true">
+<header>
+       <nav>
+            <div class="navbar-wrapper">
+                <div class="navbar-icon">
+                    <ul>
+                        <li><img src="./cart_files/cooking.png" alt="logo"></li>
+                    </ul>
+                </div>
+                <div class="navbar-item">
+                    <ul>
+                        <li><a href="./">Главная</a></li>
+                        <li>
+                            <a href="./menu.html" class="menu-item">Меню</a>
+                        </li>
+                        <li>
+                            <a href="./categories.html" class="menu-item">Категории</a>
+                            <ul class="dropdown">
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="menu-item">Контакты</span>
+                        </li>
+                        <li class="cart">
+                            <a href="./cart.html">
+                                <ion-icon name="basket"></ion-icon>Корзина <span>5</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</header>
+
+<main>
+    <h1>Корзина</h1>
+
+    <div class="products-container">
+        <div class="product-header">
+            <h5 class="product-title">ВЫБРАННОЕ</h5>
+            <h5 class="price">ЦЕНА</h5>
+            <h5 class="quantity">КОЛИЧЕСТВО</h5>
+            <h5 class="total">ВСЕГО</h5>
+        </div>
+        <div class="products">
+            <div class="product">
+                <span class="control-btn" id="2" onclick="removeProduct(2)">
+                    ×
+                </span>
+                <span>4 сыра</span>
+            </div>
+            <div class="price">159,00</div>
+            <div class="quantity">
+                <span class="control-btn" id="2" onclick="changeQuantity(2, &#39;4 сыра&#39;, &#39;159,00&#39;, -1)">
+                    —
+                </span>
+                <span class="in-cart">1</span>
+                <span class="control-btn" id="2" onclick="changeQuantity(2, &#39;4 сыра&#39;, &#39;159,00&#39;, 1)"> + </span>
+            </div>
+            <div class="total">
+                159 грн
+            </div>
+            
+            <div class="product">
+                <span class="control-btn" id="6" onclick="removeProduct(6)">
+                    ×
+                </span>
+                <span>Цезарь</span>
+            </div>
+            <div class="price">125,00</div>
+            <div class="quantity">
+                <span class="control-btn" id="6" onclick="changeQuantity(6, &#39;Цезарь&#39;, &#39;125,00&#39;, -1)">
+                    —
+                </span>
+                <span class="in-cart">2</span>
+                <span class="control-btn" id="6" onclick="changeQuantity(6, &#39;Цезарь&#39;, &#39;125,00&#39;, 1)"> + </span>
+            </div>
+            <div class="total">
+                250 грн
+            </div>
+            
+            <div class="product">
+                <span class="control-btn" id="9" onclick="removeProduct(9)">
+                    ×
+                </span>
+                <span>Чай облепиховый</span>
+            </div>
+            <div class="price">80,00</div>
+            <div class="quantity">
+                <span class="control-btn" id="9" onclick="changeQuantity(9, &#39;Чай облепиховый&#39;, &#39;80,00&#39;, -1)">
+                    —
+                </span>
+                <span class="in-cart">1</span>
+                <span class="control-btn" id="9" onclick="changeQuantity(9, &#39;Чай облепиховый&#39;, &#39;80,00&#39;, 1)"> + </span>
+            </div>
+            <div class="total">
+                80 грн
+            </div>
+            
+            <div class="product">
+                <span class="control-btn" id="1" onclick="removeProduct(1)">
+                    ×
+                </span>
+                <span>Мясной микс</span>
+            </div>
+            <div class="price">120,00</div>
+            <div class="quantity">
+                <span class="control-btn" id="1" onclick="changeQuantity(1, &#39;Мясной микс&#39;, &#39;120,00&#39;, -1)">
+                    —
+                </span>
+                <span class="in-cart">1</span>
+                <span class="control-btn" id="1" onclick="changeQuantity(1, &#39;Мясной микс&#39;, &#39;120,00&#39;, 1)"> + </span>
+            </div>
+            <div class="total">
+                120 грн
+            </div>
+            
+            <div class="basketTotalContainer">
+                <h4 class="basketTotalTitle">
+                    Итого
+                </h4><h4 class="basketTotal">609 грн</h4>
+        </div></div>
+
+        <form method="POST" action="./cart/" onsubmit="return addCart(this)" id="make-order">
+            <input type="hidden" name="csrfmiddlewaretoken" value="IDP6Ph7gtTrBl0cDRSsFNmkjOZcGhNkisqwZF69rjjzNSM3wI9d7siLo3ZLLeYcJ">
+            <div class="form__group">
+                <label for="">Имя*</label>
+                <input type="text" name="clientname" required="" class="form__input" id="name">
+                <div class="error"></div>
+            </div>
+            <div class="form__group">
+                <label for="">Телефонный номер*</label>
+                <input type="tel" name="clientphone" required="" pattern="\d\d\d-\d\d\d-\d\d-\d\d" placeholder="999-999-99-99" class="form__input" id="tel">
+                <div class="error"></div>
+            </div>
+            <div class="form__group">
+                <label for="">Улица*</label>
+                <input type="text" class="form__input" name="street" id="street" required="">
+                <div class="error"></div>
+                <label for="">№ дома*</label>
+                <input type="text" class="form__input" name="house" id="house" required="">
+                <div class="error"></div>
+            </div>
+            <div class="form__group">
+                <label for="">Квартира</label>
+                <input type="text" class="form__input" name="flat" id="flat" pattern="\d+">
+                <div class="error"></div>
+                <label for="">Подъезд</label>
+                <input type="text" class="form__input" name="entrance" id="entrance" pattern="\d+">
+                <div class="error"></div>
+                <label for="">Этаж</label>
+                <input type="text" class="form__input" name="floor" id="floor" pattern="\d+">
+                <div class="error"></div>
+            </div>
+            <div class="button-wrapper">
+                <input type="submit" class="form__button" id="signup__button" value="Заказать">
+                <input type="button" class="form__button" id="clear__button" value="Очистить">
+            </div>
+        </form>
+
+    </div>
+</main>
+
+<footer>
+    <div class="footer-wrapper">
+        <div class="footer-item">
+            <h5><strong>О нас</strong></h5>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia exercitationem obcaecati nam.
+                Exercitationem tempore dolorem hic adipisci, neque eius perferendis maxime placeat omnis sit atque in,
+                mollitia repellat ullam illo!
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia exercitationem obcaecati nam.
+                Exercitationem tempore dolorem hic adipisci, neque eius perferendis maxime placeat omnis sit atque in,
+                mollitia repellat ullam illo!
+            </p>
+        </div>
+        <div class="footer-item">
+            <h5><strong>Меню</strong></h5>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia exercitationem obcaecati nam.
+                Exercitationem tempore dolorem hic adipisci, neque eius perferendis maxime placeat omnis sit atque in,
+                mollitia repellat ullam illo!
+            </p>
+        </div>
+        <div class="footer-item">
+            <h5><strong>Контакты</strong></h5>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia exercitationem obcaecati nam.
+                Exercitationem tempore dolorem hic adipisci, neque eius perferendis maxime placeat omnis sit atque in,
+                mollitia repellat ullam illo!
+            </p>
+        </div>
+    </div>
+    <hr>
+    © 2020 Yeva V.
+</footer>
+
+<script src="./cart_files/script.js"></script>
+<script src="./cart_files/form_validate.js"></script>
+
+</body></html>

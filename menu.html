@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://127.0.0.1:8000/menu/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!--<base href="../">--><base href=".">
+
+<link href="./menu_files/style.css" rel="stylesheet">
+<title>Sit&amp;Eat. Меню</title>
+</head>
+<body cz-shortcut-listen="true">
+<header>
+    <nav>
+            <div class="navbar-wrapper">
+                <div class="navbar-icon">
+                    <ul>
+                        <li><img src="./cart_files/cooking.png" alt="logo"></li>
+                    </ul>
+                </div>
+                <div class="navbar-item">
+                    <ul>
+                        <li><a href="./">Главная</a></li>
+                        <li>
+                            <a href="./menu.html" class="menu-item">Меню</a>
+                        </li>
+                        <li>
+                            <a href="./categories.html" class="menu-item">Категории</a>
+                            <ul class="dropdown">
+                                
+                            </ul>
+                        </li>
+                        <li>
+                            <span class="menu-item">Контакты</span>
+                        </li>
+                        <li class="cart">
+                            <a href="./cart.html">
+                                <ion-icon name="basket"></ion-icon>Корзина <span>5</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</header>
+
+<main>
+    <h1>Меню</h1>
+
+    <p>
+        <input type="hidden" name="csrfmiddlewaretoken" value="Tg5EGKIdvsuebcTFV63QL8Ffl34JEZ3YD3MxwzKolSCqIYKyMnOiq46kA3DOBaVp">
+        </p><form method="POST" action="">
+            Сортировать
+            <select name="selectFilter" id="selectFilter">
+                <option value="default">Все</option>
+                <option value="low">Цена: по возрастанию</option>
+                <option value="high">Цена: по убыванию</option>
+                
+                    
+                        <option value="1">Категория: Пицца</option>
+                    
+                        <option value="2">Категория: Супы</option>
+                    
+                        <option value="3">Категория: Салаты</option>
+                    
+                        <option value="4">Категория: Напитки</option>
+            </select>
+            <input type="submit" class="form__button" id="set-btn" value="Применить">
+        </form>
+    <p></p>
+    <div>
+                <h2>Мясной микс</h2>
+                <p>120,00 грн <br>
+                    <span class="dish-item">430 г</span> <br>
+                    
+                        <span class="dish-item">Ингредиенты: сыр моцарелла, курица, копченые колбаски, хамон, оливковое масло, помидоры в собственном соку, орегано, сушеный базилик, соль</span>
+                    
+                </p>
+                <span class="btn add-cart" id="1" onclick="changeQuantity(1, &#39;Мясной микс&#39;, &#39;120,00&#39;, 1)">В корзину</span>
+            </div>
+            <hr>
+        
+            <div>
+                <h2>4 сыра</h2>
+                <p>159,00 грн <br>
+                    <span class="dish-item">410 г</span> <br>
+                    
+                        <span class="dish-item">Ингредиенты: сыр моцарелла, сыр пармезан, сыр фета, сыр с плесенью, оливковое масло, помидоры в собственном соку, орегано, сушеный базилик, соль</span>
+                    
+                </p>
+                <span class="btn add-cart" id="2" onclick="changeQuantity(2, &#39;4 сыра&#39;, &#39;159,00&#39;, 1)">В корзину</span>
+            </div>
+            <hr>
+        
+            <div>
+                <h2>Пепперони</h2>
+                <p>130,00 грн <br>
+                    <span class="dish-item">360 г</span> <br>
+                    
+                        <span class="dish-item">Ингредиенты: сыр моцарелла, оливковое масло, сырокопченая колбаса, перец чили, помидоры в собственном соку, орегано, сушеный базилик, соль</span>
+                    
+                </p>
+                <span class="btn add-cart" id="12" onclick="changeQuantity(12, &#39;Пепперони&#39;, &#39;130,00&#39;, 1)">В корзину</span>
+            </div>
+            <hr>
+        
+            <div>
+                <h2>Том-ям</h2>
+                <p>149,00 грн <br>
+                    <span class="dish-item">350 г</span> <br>
+                    
+                        <span class="dish-item">Ингредиенты: бульон Том Ям, креветка королевская, тофу, шампиньоны, тофу</span>
+                    
+                </p>
+                <span class="btn add-cart" id="4" onclick="changeQuantity(4, &#39;Том-ям&#39;, &#39;149,00&#39;, 1)">В корзину</span>
+            </div>
+            <hr>
+        
+            <div>
+                <h2>Крем-суп с грибами</h2>
+                <p>79,00 грн <br>
+                    <span class="dish-item">350 г</span> <br>
+                    
+                        <span class="dish-item">Ингредиенты: куриный бульон, белые грибы, картошка, орегано, чеснок</span>
+                    
+                </p>
+                <span class="btn add-cart" id="5" onclick="changeQuantity(5, &#39;Крем-суп с грибами&#39;, &#39;79,00&#39;, 1)">В корзину</span>
+            </div>
+            <hr>
+        
+            <div>
+                <h2>Цезарь</h2>
+                <p>125,00 грн <br>
+                    <span class="dish-item">260 г</span> <br>
+                    
+                        <span class="dish-item">Ингредиенты: салат, заправка, сухари из пшеничного хлеба со вкусом и ароматом паприки; салат: салат айсберг, салат Романо, филе куриное маринованное (для салата Цезарь)(филе куриное, кефир, соус соевый (соевые бобы, мука пшеничная), вода питьевая, чеснок, соус тайский чили</span>
+                    
+                </p>
+                <span class="btn add-cart" id="6" onclick="changeQuantity(6, &#39;Цезарь&#39;, &#39;125,00&#39;, 1)">В корзину</span>
+            </div>
+            <hr>
+        
+            <div>
+                <h2>Греческий</h2>
+                <p>89,00 грн <br>
+                    <span class="dish-item">280 г</span> <br>
+                    
+                        <span class="dish-item">Ингредиенты: сыр Сиртаки, салат Айсберг, болгарский перец, томаты черри, лук репчатый красный, соус "Лимонная заправка", соус бальзамический, укроп, маслины</span>
+                    
+                </p>
+                <span class="btn add-cart" id="7" onclick="changeQuantity(7, &#39;Греческий&#39;, &#39;89,00&#39;, 1)">В корзину</span>
+            </div>
+            <hr>
+        
+            <div>
+                <h2>Лимонад с малиной</h2>
+                <p>50,00 грн <br>
+                    <span class="dish-item">1 л</span> <br>
+                    
+                        <span class="dish-item">Ингредиенты: вода, малина свежая, сахар, мед, лайм, базилик, газировка</span>
+                    
+                </p>
+                <span class="btn add-cart" id="8" onclick="changeQuantity(8, &#39;Лимонад с малиной&#39;, &#39;50,00&#39;, 1)">В корзину</span>
+            </div>
+            <hr>
+        
+            <div>
+                <h2>Чай облепиховый</h2>
+                <p>80,00 грн <br>
+                    <span class="dish-item">800 мл</span> <br>
+                    
+                        <span class="dish-item">Ингредиенты: вода, облепиха, мед, мята</span>
+                    
+                </p>
+                <span class="btn add-cart" id="9" onclick="changeQuantity(9, &#39;Чай облепиховый&#39;, &#39;80,00&#39;, 1)">В корзину</span>
+            </div>
+            <hr>
+</main>
+
+<footer>
+    <div class="footer-wrapper">
+        <div class="footer-item">
+            <h5><strong>О нас</strong></h5>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia exercitationem obcaecati nam. Exercitationem tempore dolorem hic adipisci, neque eius perferendis maxime placeat omnis sit atque in, mollitia repellat ullam illo!
+            </p>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia exercitationem obcaecati nam. Exercitationem tempore dolorem hic adipisci, neque eius perferendis maxime placeat omnis sit atque in, mollitia repellat ullam illo!
+            </p>
+        </div>
+        <div class="footer-item">
+            <h5><strong>Меню</strong></h5>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia exercitationem obcaecati nam. Exercitationem tempore dolorem hic adipisci, neque eius perferendis maxime placeat omnis sit atque in, mollitia repellat ullam illo!
+            </p>
+        </div>
+        <div class="footer-item">
+            <h5><strong>Контакты</strong></h5>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia exercitationem obcaecati nam. Exercitationem tempore dolorem hic adipisci, neque eius perferendis maxime placeat omnis sit atque in, mollitia repellat ullam illo!
+            </p>
+        </div>
+    </div>
+    <hr>
+    © 2020 Yeva V.
+</footer>
+
+<script src="./menu_files/script.js"></script>
+
+</body></html>
