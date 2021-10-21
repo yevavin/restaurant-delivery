@@ -26,12 +26,12 @@ ul {
 
 a {
     text-decoration: none;
-    color: #111111;
+    color: #fff;
     cursor: pointer;
 }
 
 a:hover{
-    color: #8123FF;
+    color: #cea851;
     transition: 0.2s all;
 }
 
@@ -72,7 +72,8 @@ header {
 .navbar-item a{
     padding: 20px;
     display: block;
-    color: #fff;
+    color: #FFF;
+    transition: .2s ease;
 }
 
 .navbar-item li{
@@ -106,7 +107,7 @@ ul.dropdown a{
 
 .navbar-item a:hover, .navbar-item .menu-item:hover{
     background-color: rgba(0, 0, 0, 1);
-    color:  #fff;
+    color:  #cea851;
     transition: 0.2s all;
 }
 
@@ -125,7 +126,8 @@ footer {
     max-width: 1080px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    
 }
 
 .footer-wrapper > div {
@@ -139,6 +141,7 @@ footer {
 .footer-wrapper .about {
     text-transform: uppercase;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
 }
 
@@ -163,6 +166,24 @@ footer {
 main {
     width: 1080px;
     margin: 0 auto; /*Выравнивание блочного элемента по центру*/
+    padding: 50px 0;
+}
+
+main.index {
+    width: 800px;
+}
+
+main.index h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.main-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e2025;
+    text-decoration: underline #cea851;
 }
 
 .hero {
@@ -175,7 +196,7 @@ main {
     background-image: url(../images/hero.png);
 }
 
-.hero::after {
+.hero::after, .cg-item::after {
     content: '';
     position: absolute;
     top: 0;
@@ -200,14 +221,14 @@ main {
     padding: 15px 24px;
     margin-top: 15px;
     background-color: #fff;
-    border: 1px solid #3f2aff;
+    border: 1px solid #cea851;
     border-radius: 100px;
     font-size: 14px;
     cursor: pointer;
 }
 
 .btn:hover{
-    background-color: #3f2aff;
+    background-color: #cea851;
     color: #fff;
     transition: 0.3s all;
 }
@@ -248,28 +269,46 @@ main {
     width: 50%;
 }
 
-/* MENU */
+/* CATEGORIES */
 
-.menu-container {
-    padding-top: 4rem;
+.cg-container, .menu-container {
+    padding: 3rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
 }
 
-.menu-container .menu-item {
-    height: 300px;
+.cg-item {
+    height: 250px;
     border-radius: 20px;
     box-shadow: 0 0 10px 1px #ccc;
     transition: .3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-.menu-container .menu-item:hover {
+.cg-item h2 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-weight: 700;
+    z-index: 3;
+}
+
+.cg-item:hover a {
     box-shadow: 0 0 16px 2px #ccc;
+    color: #FFF;
+}
+
+.cg-item:hover::after {
+    z-index: -1;
 }
 
 .item-img {
-    height: 90%;
+    height: 100%;
     width: 100%;
     overflow: hidden;
 }
@@ -277,6 +316,30 @@ main {
 .item-img img {
     max-width: 100%;
     height: auto;
+}
+
+/* CATEGORIES END */
+
+/* MENU */
+
+.menu-container .menu-item {
+    min-height: 550px;
+    padding: 30px;
+    border: 1px solid #cea851;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-container .menu-item img {
+    width: 100%;
+    height: auto;
+}
+
+.menu-item .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* MENU END */
@@ -307,7 +370,7 @@ main {
     width: 45%
 }
 
-.price {
+.products-container .price {
     width: 15%;
     display: flex;
     align-items: center;
