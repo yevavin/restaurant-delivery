@@ -3,6 +3,9 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <base href="." />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-210680647-1"></script>
+    <script type="text/javascript" src="ga.js"></script>
     <link href="./css/style.css" rel="stylesheet" />
     <title>Sit&amp;Eat. Меню</title>
   </head>
@@ -58,106 +61,115 @@
 
       <div class="menu-container">
         <div class="menu-item">
-          <h2>Мясной микс</h2>
-          <p>
-            120,00 грн <br />
-            <span class="dish-item">430 г</span> <br />
-
-            <span class="dish-item"
-              >Ингредиенты: сыр моцарелла, курица, копченые колбаски, хамон,
-              оливковое масло, помидоры в собственном соку, орегано, сушеный
-              базилик, соль</span
-            >
-          </p>
-          <span
-            class="btn add-cart"
-            id="1"
-            onclick="changeQuantity(1, &#39;Мясной микс&#39;, &#39;120,00&#39;, 1)"
-            >В корзину</span
-          >
+          <div class="img-wrapper">
+            <img src="./images/pizza_meat-mix.webp" alt="" />
+          </div>
+          <div class="label">
+            <h2>Мясной микс</h2>
+            <p>
+              <span class="dish-item">430 г</span> <br />
+              <span class="dish-item"
+                >Ингредиенты: сыр моцарелла, курица, копченые колбаски, хамон,
+                оливковое масло, помидоры в собственном соку, орегано, сушеный
+                базилик, соль</span
+              >
+            </p>
+          </div>
+          <div class="bottom">
+            <div class="price">120,00 грн</div>
+            <div class="to-cart">
+              <span
+                class="btn add-cart"
+                id="1"
+                onclick="changeQuantity(1, &#39;Мясной микс&#39;, &#39;120,00&#39;, 1)"
+                >В корзину</span
+              >
+            </div>
+          </div>
         </div>
 
         <div class="menu-item">
-          <h2>4 сыра</h2>
-          <p>
-            159,00 грн <br />
-            <span class="dish-item">410 г</span> <br />
+          <div class="img-wrapper">
+            <img src="./images/pizza_4-cheese.webp" alt="" />
+          </div>
+          <div class="label">
+            <h2>4 сыра</h2>
+            <p>
+              <span class="dish-item">410 г</span> <br />
 
-            <span class="dish-item"
-              >Ингредиенты: сыр моцарелла, сыр пармезан, сыр фета, сыр с
-              плесенью, оливковое масло, помидоры в собственном соку, орегано,
-              сушеный базилик, соль</span
-            >
-          </p>
-          <span
-            class="btn add-cart"
-            id="2"
-            onclick="changeQuantity(2, &#39;4 сыра&#39;, &#39;159,00&#39;, 1)"
-            >В корзину</span
-          >
+              <span class="dish-item"
+                >Ингредиенты: сыр моцарелла, сыр пармезан, сыр фета, сыр с
+                плесенью, оливковое масло, помидоры в собственном соку, орегано,
+                сушеный базилик, соль</span
+              >
+            </p>
+          </div>
+          <div class="bottom">
+            <div class="price">159,00 грн</div>
+            <div class="to-cart">
+              <span
+                class="btn add-cart"
+                id="2"
+                onclick="changeQuantity(2, &#39;4 сыра&#39;, &#39;159,00&#39;, 1)"
+                >В корзину</span
+              >
+            </div>
+          </div>
         </div>
 
         <div class="menu-item">
-          <h2>Пепперони</h2>
-          <p>
-            130,00 грн <br />
-            <span class="dish-item">360 г</span> <br />
-
-            <span class="dish-item"
-              >Ингредиенты: сыр моцарелла, оливковое масло, сырокопченая
-              колбаса, перец чили, помидоры в собственном соку, орегано, сушеный
-              базилик, соль</span
-            >
-          </p>
-          <span
-            class="btn add-cart"
-            id="12"
-            onclick="changeQuantity(12, &#39;Пепперони&#39;, &#39;130,00&#39;, 1)"
-            >В корзину</span
-          >
+          <div class="img-wrapper">
+            <img src="./images/pizza_4-cheese.webp" alt="" />
+          </div>
+          <div class="label">
+            <h2>Пепперони</h2>
+            <p>
+              <span class="dish-item">360 г</span> <br />
+              <span class="dish-item"
+                >Ингредиенты: сыр моцарелла, оливковое масло, сырокопченая
+                колбаса, перец чили, помидоры в собственном соку, орегано,
+                сушеный базилик, соль</span
+              >
+            </p>
+          </div>
+          <div class="bottom">
+            <div class="price">130,00 грн</div>
+            <div class="to-cart">
+              <span
+                class="btn add-cart"
+                id="12"
+                onclick="changeQuantity(12, &#39;Пепперони&#39;, &#39;130,00&#39;, 1)"
+                >В корзину</span
+              >
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
     <footer>
       <div class="footer-wrapper">
-        <div class="footer-item">
-          <h5><strong>О нас</strong></h5>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
-            exercitationem obcaecati nam. Exercitationem tempore dolorem hic
-            adipisci, neque eius perferendis maxime placeat omnis sit atque in,
-            mollitia repellat ullam illo!
-          </p>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
-            exercitationem obcaecati nam. Exercitationem tempore dolorem hic
-            adipisci, neque eius perferendis maxime placeat omnis sit atque in,
-            mollitia repellat ullam illo!
-          </p>
-        </div>
-        <div class="footer-item">
-          <h5><strong>Меню</strong></h5>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
-            exercitationem obcaecati nam. Exercitationem tempore dolorem hic
-            adipisci, neque eius perferendis maxime placeat omnis sit atque in,
-            mollitia repellat ullam illo!
-          </p>
-        </div>
-        <div class="footer-item">
-          <h5><strong>Контакты</strong></h5>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia
-            exercitationem obcaecati nam. Exercitationem tempore dolorem hic
-            adipisci, neque eius perferendis maxime placeat omnis sit atque in,
-            mollitia repellat ullam illo!
-          </p>
-        </div>
+          <div class="footer-item about">
+              <h5><strong>О нас</strong></h5>
+          </div>
+          <div class="footer-item logo">
+              <a href="/index.html"><span class="footer-logo">La'reserve</span></a>
+          </div>
+          <div class="footer-item social">
+              <ul>
+                  <li>
+                      <a href="https://m.facebook.com/pages/category/Family-Style-Restaurant/Zori-Meat-gastropub-206784616852931/" target="_blank"><img src="./images/fb.svg" alt=""></a>
+                  </li>
+                  <li>
+                      <a href="https://www.instagram.com/zori_gastropub/?hl=ru" target="_blank"><img src="./images/inst.svg" alt=""></a>
+                  </li>
+                  <li>
+                      <a href="zorimeatgastropub@gmail.com" target="_blank"><img src="./images/mail.svg" alt=""></a>
+                  </li>
+              </ul>
+          </div>
       </div>
-
-      © 2020 Yeva V.
-    </footer>
+  </footer>
 
     <script src="./menu_files/script.js"></script>
   </body>
