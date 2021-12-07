@@ -1,0 +1,71 @@
+.prompt__btn {
+   height: 48px;
+   width: 48px;
+   border-radius: 100%;
+   background-color: #fff;
+   -webkit-box-shadow: 0px 0px 20px #929292;
+           box-shadow: 0px 0px 20px #929292;
+   position: absolute;
+   right: 20px;
+   bottom: 20px;
+   z-index: 100;
+   cursor: pointer;
+   -webkit-transition: all .2s;
+   transition: all .2s;
+ }
+ 
+ .prompt__btn::after {
+   content: "?";
+   color: #4E57B9;
+   font-weight: bold;
+   font-size: 20px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+ }
+ 
+ .prompt__btn:hover {
+   -webkit-transform: scale(1.1);
+   transform: scale(1.1);
+ }
+ 
+ .prompt__btn:active {
+   -webkit-transform: scale(1);
+   transform: scale(1);
+ }
+ 
+ .prompt__popup {
+   height: 70px;
+   width: 300px;
+   padding: 10px 20px;
+   color: #969696;
+   font-size: 15px;
+   background-color: #fff;
+   -webkit-box-shadow: 0px 0px 20px #929292;
+           box-shadow: 0px 0px 20px #929292;
+   border-radius: 20px;
+   position: absolute;
+   right: 20px;
+   bottom: 90px;
+ }
+ 
+ .prompt__popup-content {
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+   -webkit-transform: translateY(-50%);
+ }
+ 
+ .prompt__popup::after {
+   content: '';
+   height: 36px;
+   width: 30px;
+   background-color: #fff;
+   -webkit-clip-path: polygon(49% 52%, 0 0, 100% 0);
+           clip-path: polygon(49% 52%, 0 0, 100% 0);
+   position: absolute;
+   bottom: -30px;
+   right: 8px;
+ }

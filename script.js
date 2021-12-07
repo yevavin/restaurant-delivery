@@ -1,3 +1,5 @@
+import {promptBtn, setCompletedRequests} from '../components/prompt.js';
+
 function changeQuantity(id, name, price, param) {
       let product = {
         'name': name,
